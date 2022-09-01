@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-weight: 300;
+}
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+
+.equilibrim {
+  border-radius: 10px;
+  width: 260px;
+  height: 260px;
+  margin: 20px;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+.main-image {
+  position: relative;
+  top: 20px;
+}
+
+.main-image div {
+  position: absolute;
+  top: -20px;
+  background-color: hsl(178, 100%, 50%, 60%);
+  border-radius: 10px;
+  width: 260px;
+  height: 260px;
+  margin: 20px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main-image div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-image div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.eth {
+  width: 3%;
+  height: 50%;
+}
+
+.icon {
+  display: flex;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-right: 20px;
+}
+
+.icon p {
+  font-size: 13px;
+  margin-left: 5px;
+  color: hsl(178, 100%, 50%);
+}
+
+.icon div {
+  display: flex;
+  margin-left: 106px;
+}
+
+.icon div p {
+  color: hsl(215, 51%, 70%);
+}
+
+.text {
+  text-align: left;
+  margin-left: 20px;
+  width: 260px;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.author {
+  border-top: 1px solid hsla(215, 51%, 70%, 0.4);
+  margin: 20px 20px 0px;
+  display: flex;
+  max-width: 260px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+}
+
+.author img {
+  width: 10%;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.author p {
+  margin-left: 10px;
+  color: hsl(215, 51%, 70%);
+  font-size: 14px;
+}
+
+.id {
+  padding-top: 20px;
+}
+
+.id p:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.author p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.author p span {
+  font-weight: 400;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+  color: hsl(215, 51%, 70%);
+  line-height: 1.5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

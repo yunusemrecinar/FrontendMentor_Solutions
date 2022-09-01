@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: scrollable;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.top p {
+  text-align: center;
+}
+
+.top h1 {
+  color: var(--very-dark-blue);
+  max-width: 400px;
+}
+.top h1:first-child {
+  font-weight: 200;
+}
+
+.top span {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.top p {
+  font-weight: 400;
+  width: 750px;
+  color: var(--grayish-blue);
+}
+
+article {
+  background-color: #fff;
+  position: relative;
+  border-radius: 5.5px;
+  padding: 2rem;
+  width: 375px;
+  height: 275px;
+  box-shadow: 3px 3px 34px 5px rgba(0, 0, 0, 0.05);
+}
+
+article blockquote {
+  line-height: 2;
+  padding-top: 1rem;
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+article img {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+article h2 {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.first {
+  border-top: 0.35rem solid var(--cyan);
+  margin-right: 2rem;
+}
+
+.up {
+  margin-bottom: 2rem;
+  border-top: 0.35rem solid var(--red);
+}
+
+.down {
+  border-top: 0.35rem solid var(--orange);
+}
+
+.third {
+  border-top: 0.35rem solid var(--blue);
+  margin-left: 2rem;
+}
+
+@media (max-width: 1300px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .first {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .third {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .top p {
+    width: 420px;
+  }
+}

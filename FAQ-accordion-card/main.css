@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* Background Gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 4rem;
+  width: 70vw;
+  height: 58vh;
+  border-radius: 2rem;
+  position: relative;
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left -35.8rem bottom -7rem;
+}
+
+.reverse {
+  transform: rotate(180deg);
+}
+
+p {
+  margin-bottom: 13px;
+  font-weight: 400;
+  position: relative;
+}
+
+hr {
+  margin-bottom: 13px;
+}
+span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  position: absolute;
+  left: -5rem;
+  top: 6rem;
+}
+
+.content {
+  margin-left: 30rem;
+  margin-right: 3.7rem;
+  width: 23vw;
+}
+
+.content p img {
+  position: absolute;
+  right: 5px;
+}
+
+.box {
+  position: absolute;
+  left: 8.5vw;
+  top: 45vh;
+  z-index: 3;
+}
+
+p:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1300px) {
+  .content {
+    margin-left: 24rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    margin-left: 22rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    overflow: visible;
+  }
+
+  section {
+    flex-direction: column;
+    height: 70vh;
+    width: 85vw;
+    padding: 1rem;
+    background-image: url("images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left 38px top 5px;
+  }
+
+  .content {
+    margin-top: 6rem;
+    margin-left: 0;
+    margin-right: 0;
+    overflow-y: scroll;
+    width: auto;
+  }
+
+  .content h1 {
+    text-align: center;
+  }
+
+  .icon {
+    z-index: 2;
+    left: 2.4rem;
+    top: -6.7rem;
+  }
+
+  .icon img {
+    width: 85%;
+  }
+
+  .box {
+    width: 24%;
+    left: 17.5vw;
+    top: 10.6vh;
+  }
+}
+
+/* KEYFRAMES // ANIMATIONS */
+
+@keyframes boxHop {
+  from {
+    transform: translate(-7%, 2%);
+  }
+
+  50% {
+    transform: translate(-7%, 10%);
+  }
+
+  to {
+    transform: translate(-7%, 2%);
+  }
+}
+
+.box {
+  transform: translate(-7%, 2%);
+  animation: boxHop 2s ease-in-out;
+  animation-iteration-count: infinite;
+}

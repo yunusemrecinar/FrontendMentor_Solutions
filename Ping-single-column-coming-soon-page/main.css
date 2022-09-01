@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.logo {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.header h1 span {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.sub {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.inpt {
+  margin-bottom: 5rem;
+}
+.inpt input {
+  border: var(--pale-blue) 1px solid;
+  border-radius: 2rem;
+  padding: 1.2rem 2rem;
+  width: 29vw;
+  margin-right: 1rem;
+}
+
+.inpt input:focus {
+  outline: none;
+  border-color: var(--pale-blue);
+}
+
+.inpt button {
+  padding: 1.2rem 4.1rem;
+  color: #fff;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 300;
+}
+
+.inpt button:hover {
+  background-color: hsla(223, 87%, 63%, 0.75);
+  cursor: pointer;
+}
+.dashboard img {
+  width: 50%;
+  margin-bottom: 4rem;
+}
+
+.icons {
+  margin-bottom: 1rem;
+}
+
+.icons i:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.icons i {
+  font-size: 1.7rem;
+  color: #a149fa;
+}
+
+.icons i:hover {
+  color: #533483;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.textMobile,
+.textDesktop {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--light-red);
+}
+
+.textDekstop {
+  padding-right: 15rem;
+}
+@media screen and (max-width: 1000px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .sub {
+    font-size: 0.85rem;
+  }
+  .inpt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .inpt input {
+    margin-right: 0;
+    min-width: 270px;
+  }
+
+  .inpt button {
+    margin-top: 1rem;
+    width: 270px;
+  }
+
+  .dashboard img {
+    width: 85%;
+    margin-bottom: 8rem;
+  }
+}

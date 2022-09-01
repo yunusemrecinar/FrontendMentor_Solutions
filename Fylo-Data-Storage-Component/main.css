@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  background-color: var(--very-dark-blue);
+  background-image: url(images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  padding: 2.5rem;
+}
+
+.left {
+  width: 350px;
+  border-radius: 10px 95px 10px 10px;
+}
+
+.left .logo {
+  margin-bottom: 25px;
+}
+
+.left .icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icons i {
+  display: flex;
+  background-color: var(--very-dark-blue);
+  width: 46px;
+  height: 46px;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.right {
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 38px;
+  position: relative;
+}
+
+.right p,
+.right span {
+  color: var(--pale-blue);
+}
+
+.right span {
+  font-weight: 700;
+}
+
+.outer {
+  position: absolute;
+  left: 0;
+  width: 450px;
+  height: 19px;
+  background-color: var(--very-dark-blue);
+  border-top: 40px;
+  border-radius: 10px;
+}
+
+.inner {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 320px;
+  height: 13px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 10px;
+}
+.right p {
+  margin-bottom: 18px;
+}
+
+.bar {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.capacity {
+  display: flex;
+  flex-direction: row;
+  gap: 22.6rem;
+}
+
+.left-storage {
+  position: absolute;
+  color: var(--very-dark-blue);
+  right: 38px;
+  top: -40px;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.left-storage::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-top: 30px solid #fff;
+  border-left: 30px solid transparent;
+  right: 0px;
+  top: 62px;
+}
+
+.bar::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  right: 129px;
+  top: 4px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+.uno,
+.dos,
+.tres {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--very-dark-blue);
+}
+
+.lef {
+  margin-left: 10px;
+  padding-top: 14px;
+  color: hsl(220, 2%, 32%);
+}
+
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .right {
+    margin-top: 0px;
+    width: 350px;
+  }
+
+  .outer {
+    width: 240px;
+  }
+
+  .inner {
+    width: 170px;
+  }
+
+  .left {
+    width: 320px;
+  }
+
+  .right {
+    width: 320px;
+  }
+
+  .capacity {
+    gap: 9.4rem;
+  }
+
+  .left-storage::after {
+    border: 0px;
+  }
+
+  .left-storage {
+    right: 80px;
+    top: 120px;
+  }
+
+  .bar::after {
+    right: 69px;
+  }
+
+  body {
+    background-image: url(images/bg-mobile.png);
+    background-size: 100% 100%;
+  }
+}

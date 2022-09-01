@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-image: url("images/bg-intro-desktop.png");
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--red);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 40vw;
+  color: #fff;
+}
+
+.left h1 {
+  font-size: 3rem;
+  margin-bottom: 2.2rem;
+  line-height: 1.2;
+}
+
+.left p {
+  width: 88%;
+  font-weight: 400;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 38vw;
+}
+
+.head {
+  background-color: var(--blue);
+  text-align: center;
+  border-radius: 0.75rem;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 7px 0px 0px rgba(161, 0, 0, 0.2);
+}
+
+.head p {
+  color: #fff;
+}
+
+.head p span {
+  font-weight: 700;
+}
+
+.middle {
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0px 7px 0px 0px rgba(161, 0, 0, 0.2);
+}
+
+.middle form input {
+  border: var(--grayish-blue) 1px solid;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1.2rem 1.1rem;
+  width: 32.5vw;
+}
+
+.middle form input::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+.middle form {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle button {
+  width: 100%;
+  height: 6vh;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--green);
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.middle button:hover {
+  cursor: pointer;
+  background-color: hsla(154, 59%, 51%, 0.75);
+}
+
+.middle .terms {
+  color: var(--grayish-blue);
+  font-size: 0.7rem;
+}
+
+.middle .terms span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.error {
+  text-align: right;
+  margin-bottom: 0.5rem;
+  color: var(--red);
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+.middle form i {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.first::after,
+.second::after,
+.third::after,
+.fourth::after {
+  content: "";
+  right: 1rem;
+  position: absolute;
+  background-image: url("images/icon-error.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.first::after {
+  top: 1rem;
+}
+
+.second::after {
+  top: 1rem;
+}
+
+.third::after {
+  top: 1rem;
+}
+
+.fourth::after {
+  top: 1rem;
+}
+@media screen and (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 80vw;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .left p {
+    width: 100%;
+    font-size: 0.95rem;
+    margin-bottom: 4rem;
+  }
+
+  .right {
+    width: 87vw;
+    margin-bottom: 1rem;
+  }
+
+  .head {
+    color: #fff;
+    padding: 1.2rem 3rem;
+  }
+
+  .head p span {
+    font-weight: 600;
+  }
+
+  .middle {
+    padding: 1.5rem;
+  }
+
+  .claim {
+    width: 74.5vw;
+  }
+
+  .terms {
+    padding: 0 1rem;
+  }
+}
+
+@keyframes hop {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  50% {
+    transform: translate(0%, 20%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+.head {
+  transform: translate(0%, 5%);
+  animation: hop 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
