@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0px;
+  cursor: pointer;
+}
+
+blockquote {
+  margin-bottom: 2.5rem;
+  color: var(--light-cyan);
+  font-size: 28px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 3rem 3rem 4.5rem;
+  background-color: var(--dark-grayish);
+  border-radius: 15px;
+  width: 550px;
+  max-height: 400px;
+  position: relative;
+  box-shadow: 0px 0px 50px 0px #1b1d20;
+  transition: max-height 1s;
+}
+
+section p {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+  animation: slideIn 1.5s ease;
+}
+
+.dice {
+  position: absolute;
+  padding: 18px 18px 15px 18px;
+  background-color: var(--neon-green);
+  width: fit-content;
+  border-radius: 50%;
+  bottom: -26px;
+  transition: 0.2s;
+}
+
+.dice:hover {
+  box-shadow: 0px 0px 50px 0px #52ffa8;
+}
+
+.slide {
+  animation: slideIn 1.5s ease;
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    width: 90vw;
+    padding: 2.4rem 1.5rem 4.4rem;
+  }
+
+  .hr {
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: scale(1);
+    filter: saturate(1.3);
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: saturate(1);
+  }
+}
