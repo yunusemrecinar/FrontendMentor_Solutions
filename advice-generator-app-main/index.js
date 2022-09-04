@@ -13,13 +13,12 @@ function getQuote() {
     .then((data) => {
       quote.textContent = `"${data.slip.advice}"`;
       id.textContent = data.slip.id;
-      console.log(data.slip.advice);
-    });
 
-  quote.classList.add("slide");
-  setTimeout(() => {
-    quote.classList.remove("slide");
-  }, 1280);
+      quote.classList.add("slide");
+      setTimeout(() => {
+        quote.classList.remove("slide");
+      }, 1280);
+    });
 }
 
 document.querySelector("button").addEventListener("click", getQuote);
