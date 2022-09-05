@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  margin-top: 12px;
+  height: 4.2rem;
+  width: 1px;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+body {
+  font-size: 18px;
+  background: url("images/pattern-bg.png") no-repeat top center;
+  background-size: 100% 30vh;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search {
+  display: flex;
+}
+input {
+  width: 34vw;
+  padding: 1rem 1.3rem;
+  border: 0px;
+  margin-bottom: 7.8rem;
+  border-radius: 15px 0 0 15px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  height: 55px;
+  width: 55px;
+  border: 0px;
+  background-color: black;
+  border-radius: 0 15px 15px 0;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 0%, 0.7);
+  cursor: pointer;
+}
+.ip-infos {
+  display: flex;
+  flex-direction: row;
+  gap: 2.2rem;
+  padding: 2.3rem 4rem 2.3rem 2rem;
+  background-color: #fff;
+  font-weight: 700;
+  color: var(--very-dark-gray);
+  max-width: 1110px;
+  z-index: 2;
+  border-radius: 1rem;
+  position: absolute;
+  left: auto;
+  top: 21%;
+}
+
+.part {
+  margin-right: 3.3rem;
+}
+
+.part span {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.part p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.part p:nth-child(2) {
+  padding-top: 0.7rem;
+}
+
+.second {
+  width: 150px;
+}
+
+.third {
+  width: 200px;
+}
+
+.fourth {
+  width: 100px;
+  margin-right: 4.3rem;
+  font-size: 1rem;
+}
+
+#map {
+  height: 69.9vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.icon {
+  position: absolute;
+  width: 5%;
+  right: 3rem;
+  top: 3rem;
+}
+
+@media screen and (max-width: 1150px) {
+  body {
+    background-size: auto 32%;
+  }
+
+  .icon {
+    width: 12%;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .ip-infos {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    top: 18%;
+  }
+  hr {
+    display: none;
+  }
+
+  .part {
+    margin-right: 0;
+    width: fit-content;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+
+  .part p:nth-child(2) {
+    font-size: 1.2rem;
+    padding-top: 0.3rem;
+  }
+
+  input {
+    width: 74vw;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #map {
+    height: 67.99vh;
+  }
+
+  input {
+    margin-bottom: 10.2rem;
+  }
+}
+
+@keyframes hop {
+  from {
+    transform: translate(0%, 0%);
+  }
+
+  50% {
+    transform: translate(0%, 25%);
+  }
+
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+.head {
+  transform: translate(0%, 0%);
+  animation: hop 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
