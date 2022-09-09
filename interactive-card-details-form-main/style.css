@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap");
+:root {
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+  --mix: linear-gradient(hsl(249, 99%, 64%), hsl(278, 93%, 30%));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  background-image: url("images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 35vw 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  max-width: 546px;
+}
+
+.card {
+  border-radius: 8px;
+  color: var(--white);
+  width: 31vw;
+}
+
+.top {
+  background: url("images/bg-card-front.png") no-repeat;
+  padding: 3rem;
+  margin-bottom: 3rem;
+}
+
+#cardNum {
+  margin-top: 6rem;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.person p {
+  margin-bottom: 0;
+}
+
+.person p:nth-child(1) {
+  letter-spacing: 2px;
+}
+
+.person p:nth-child(2) {
+  margin-left: auto;
+}
+
+.bottom {
+  background: url("images/bg-card-back.png") no-repeat;
+  margin-left: 10rem;
+  height: 25.2vh;
+  position: relative;
+  color: #fff;
+}
+
+.bottom p {
+  position: absolute;
+  right: 12.5%;
+  bottom: 43%;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.content {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.col-xs-6,
+.col-xs-12 {
+  padding-left: 0;
+}
+
+.wht {
+  color: #fff;
+  opacity: 0;
+}
+
+::placeholder {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.sass {
+  padding-right: 8px;
+}
+
+.form-group input {
+  height: 45px;
+  border-radius: 8px;
+}
+
+.chng {
+  border: 0;
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  padding: 1.5rem 0;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+.complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: appear 2s ease-in-out;
+}
+
+.complete .success {
+  margin-bottom: 2rem;
+}
+
+.complete h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 29px;
+}
+
+.complete p {
+  font-weight: 500;
+  color: var(--dark-grayish-violet);
+  margin-bottom: 3rem;
+}
+
+.complete button {
+  width: 25vw;
+}
+
+.form-control:focus {
+  border-color: var(--mix);
+  box-shadow: 0 0 180px 1px #8b36bd;
+}
+
+form {
+  margin-top: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  margin-top: 5px;
+  color: var(--red);
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.errorDate {
+  font-size: 10.65px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#creditcard {
+  width: 15%;
+  margin: auto;
+  display: block;
+  transition: width 1s, transform 1s;
+}
+
+#creditcard:hover {
+  width: 18%;
+  transform: rotate(-360deg);
+}
+
+#confirm {
+  transition: transform 1s;
+}
+
+#confirm:hover {
+  transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background-image: none;
+    background-image: url("images/bg-main-mobile.png");
+    background-size: auto;
+  }
+
+  .main {
+    flex-direction: column;
+    column-gap: 0;
+  }
+
+  .cards {
+    flex-direction: column-reverse;
+    max-width: 90vw;
+  }
+
+  .card {
+    width: 75vw;
+  }
+
+  .top {
+    margin-bottom: 0;
+    background-size: cover;
+    padding: 2rem;
+    margin-top: -9rem;
+    z-index: 2;
+  }
+
+  .top img {
+    width: 25%;
+  }
+
+  #cardNum {
+    font-size: 16px;
+    margin-top: 4rem;
+  }
+
+  .person p,
+  .bottom p {
+    font-size: 10px;
+  }
+
+  .bottom {
+    margin-left: auto;
+    background-size: 100%;
+    height: 20vh;
+  }
+
+  .bottom p {
+    bottom: 47%;
+  }
+
+  .content {
+    margin-top: 4rem;
+    width: 90vw;
+  }
+}
