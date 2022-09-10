@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", sans-serif;
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+  font-size: 24px;
+  background-color: var(--light-grayish-cyan);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button,
+input {
+  border: 0;
+  border-radius: 6px;
+}
+
+input {
+  background-color: var(--very-light-grayish-cyan);
+  width: 100%;
+  text-align: right;
+  font-size: 1.2rem;
+  color: var(--very-dark-cyan);
+  padding-right: 1rem;
+}
+
+::placeholder {
+  float: right;
+  font-size: 1.5rem;
+  color: var(--grayish-cyan);
+  padding-top: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--strong-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#tip::placeholder {
+  font-size: 1.5rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.calculator {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.calc p {
+  color: var(--dark-grayish-cyan);
+  font-size: 1rem;
+}
+
+.billPart {
+  position: relative;
+}
+
+.billPart p {
+  margin-bottom: 0.5rem;
+}
+
+.billPart input {
+  height: 3rem;
+  margin-bottom: 2.3rem;
+}
+
+.billPart::before {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  background-image: url("images/icon-dollar.svg");
+  width: 0.7rem;
+  height: 1.1rem;
+}
+
+.tipPart p {
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.8rem;
+  row-gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.perc {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.4rem 0;
+}
+
+.perc:hover {
+  cursor: pointer;
+  background-color: hsla(172, 67%, 45%, 0.5);
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 1s;
+}
+
+.numPart {
+  position: relative;
+}
+
+.numPart p {
+  margin-bottom: 0.5rem;
+}
+
+.numPart input {
+  height: 3rem;
+}
+
+.numPart::before {
+  content: "";
+  position: absolute;
+  background-image: url("images/icon-person.svg");
+  height: 1rem;
+  width: 0.85rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.show {
+  background-color: var(--very-dark-cyan);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  padding: 2.4rem 2.2rem 2rem;
+  width: 50%;
+}
+
+.tipAmount {
+  margin-top: 0.7rem;
+  margin-bottom: 2.2rem;
+  position: relative;
+}
+
+.tipAmount span:first-child::after {
+  content: "/ person";
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  font-size: 0.8rem;
+  height: fit-content;
+  width: fit-content;
+  color: var(--grayish-cyan);
+}
+
+.tipAmount span:not(:last-child),
+.total span:not(:last-child) {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.tipAmount span:last-child,
+.total span:last-child {
+  float: right;
+}
+
+.total {
+  position: relative;
+}
+
+.total span:first-child::after {
+  content: "/ person";
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  height: fit-content;
+  width: fit-content;
+  color: var(--grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.money {
+  color: var(--strong-cyan);
+  font-size: 2.6rem;
+}
+
+.reset {
+  background-color: hsl(187deg 82% 23%);
+  color: var(--very-dark-cyan);
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: auto;
+}
+
+.show button:hover {
+  cursor: pointer;
+  background-color: rgb(170, 224, 217);
+  transform: scale(1.05);
+  transition: background-color 0.3s, transform 1s;
+}
+
+.active {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+@media (max-width: 900px) {
+  .calculator {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  .logo {
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .calc,
+  .show {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .calc {
+    padding: 0;
+  }
+
+  .show {
+    padding: 1.4rem 1.4rem 1.4rem;
+  }
+
+  .options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .money {
+    font-size: 2rem;
+  }
+
+  #bill {
+    margin-bottom: 2rem;
+  }
+
+  #num {
+    margin-bottom: 2rem;
+  }
+
+  .numPart::before {
+    bottom: 3rem;
+  }
+
+  .tipAmount {
+    margin-bottom: 1.2rem;
+  }
+
+  .total {
+    margin-bottom: 2.5rem;
+  }
+}
